@@ -1,0 +1,27 @@
+version: 0.1
+
+#environment_variables:
+#  plaintext:
+#    TEST: "value1"
+#    TEST: "value2"
+
+phases:
+  install:
+    commands:
+      - apt-get update
+      - apt-get install -y golang git
+  pre_build:
+#    commands:
+#      - 
+  build:
+    commands:
+      - cd $CODEBUILD_SRC_DIR && go build
+#  post_build:
+#    commands:
+#      - command
+#      - command
+artifacts:
+  files:
+    - vomit
+  discard-paths: yes
+#  base-directory: location
