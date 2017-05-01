@@ -10,9 +10,9 @@ phases:
     commands:
       - apt-get update
       - apt-get install -y golang git
-  pre_build:
+#  pre_build:
 #    commands:
-#      - 
+#      -
   build:
     commands:
       - cd $CODEBUILD_SRC_DIR && go build
