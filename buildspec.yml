@@ -15,11 +15,7 @@ phases:
 #      -
   build:
     commands:
-      - echo path is $PATH
-      - export GOPATH=$CODEBUILD_SRC_DIR
-      - echo GOPATH is $GOPATH
-      - echo PWD is `pwd`
-      - go build
+      - export GOPATH=$CODEBUILD_SRC_DIR; go build -o vomit
   post_build:
     commands:
       - echo Build completed on `date`
