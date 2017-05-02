@@ -15,10 +15,10 @@ phases:
 #      -
   build:
     commands:
-      - cd $CODEBUILD_SRC_DIR && go build
+      - go build
   post_build:
     commands:
-      - echo Build completed on `date1`
+      - echo Build completed on $(date)
       - ls
 artifacts:
   files:
