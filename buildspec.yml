@@ -15,10 +15,10 @@ phases:
 #      -
   build:
     commands:
-      - go build
+      - go build -v
   post_build:
     commands:
-      - echo Build completed on $(date)
+      - echo Build completed on `date`
       - ls
 artifacts:
   files:
