@@ -20,8 +20,8 @@ phases:
     commands:
       - mkdir -p vomit-build/$CODEBUILD_BUILD_ID/
       - mv vomit vomit-build/$CODEBUILD_BUILD_ID/
-artifacts:
-  files:
-    - **/*
-  discard-paths: no
-  base-directory: vomit-build/
+  artifacts:
+    files:
+      - **/*
+    discard-paths: no
+    base-directory: vomit-build/
