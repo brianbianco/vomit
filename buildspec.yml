@@ -19,7 +19,6 @@ phases:
   post_build:
     commands:
       - mkdir -p vomit-build-$CODEBUILD_BUILD_ID
-      - git rev-parse HEAD
       - mv vomit CODEBUILD_BUILD_ID/
 artifacts:
   files:
