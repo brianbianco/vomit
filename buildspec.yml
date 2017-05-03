@@ -19,7 +19,7 @@ phases:
   post_build:
     commands:
       - mkdir -p vomit-build-$CODEBUILD_BUILD_ID
-      - mv vomit CODEBUILD_BUILD_ID/
+      - mv vomit $CODEBUILD_BUILD_ID/
 artifacts:
   files:
     - vomit-build*/*
