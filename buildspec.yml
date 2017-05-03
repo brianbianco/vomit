@@ -22,6 +22,6 @@ phases:
       - mv vomit vomit-build/$CODEBUILD_BUILD_ID/
   artifacts:
     files:
-      - **/*
+      - '**/*'
     discard-paths: no
     base-directory: vomit-build/
