@@ -18,10 +18,10 @@ phases:
       - export GOPATH=$CODEBUILD_SRC_DIR; go build -o vomit
   post_build:
     commands:
-      - mkdir -p vomit-build-$CODEBUILD_BUILD_ID
-      - mv vomit $CODEBUILD_BUILD_ID/
+      - mkdir -p vomit-build/$CODEBUILD_BUILD_ID/
+      - mv vomit vomit-build/$CODEBUILD_BUILD_ID/
 artifacts:
   files:
-    - vomit-build*/*
+    - **/*
   discard-paths: no
-#  base-directory: location
+  base-directory: vomit-build/
