@@ -33,9 +33,9 @@ func main() {
 		}
 	}(chans)
 	wg.Add(3)
-	go write_vomit("./data/stream1.dat", &wg, &chans[0])
-	go write_vomit("./data/stream2.dat", &wg, &chans[1])
-	go write_vomit("./data/stream3.dat", &wg, &chans[2])
+	go write_vomit("./stream1.dat", &wg, &chans[0])
+	go write_vomit("./stream2.dat", &wg, &chans[1])
+	go write_vomit("./stream3.dat", &wg, &chans[2])
 	wg.Wait()
 }
 
